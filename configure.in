@@ -1,0 +1,20 @@
+AC_INIT
+AC_CONFIG_SRCDIR([configure.in])
+
+AM_CONFIG_HEADER(config.h)
+AM_INIT_AUTOMAKE(itsnet, 1.1)
+
+AC_USE_SYSTEM_EXTENSIONS
+
+AC_LANG([C])
+AC_PROG_CC
+LT_INIT
+
+AC_CHECK_LIB(m, sin,[],[echo "Error! You need to have libm-dev";exit -1])
+AC_CHECK_LIB(gps,gps_open,[],[echo "Error! You need to have libgps-dev.";exit -1])
+AC_CHECK_LIB(pthread, pthread_create,[],[echo "Error! You need to have libpthread-dev.";exit -1])
+AC_CHECK_LIB(rt, clock_gettime,[],[echo "Error! You need to have librt-dev.";exit -1])
+AC_CHECK_LIB(confuse, cfg_init,[],[echo "Error! You need to have libconfuse-dev.";exit -1])
+
+AC_CONFIG_FILES([Makefile src/Makefile])
+AC_OUTPUT

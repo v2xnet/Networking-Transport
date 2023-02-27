@@ -1,0 +1,52 @@
+# Whether Itsnet is a daemon or not.
+# default = false
+DetachFromTTY = false
+
+#Specifies the debug level (0 or 1)
+#default = 0
+DebugLevel = 1
+
+# Specifies an interface
+# default = wlan1
+#Device = wlan0
+Device = wlx6c60eb4cfb71
+# Specifies itsnet max data size
+#default 1500
+ItsnetDataSize = 1500
+
+# Specifies the broadcast mac
+#default = ff:ff:ff:ff:ff:ff
+BroadcastMac = "ff:ff:ff:ff:ff:ff"
+
+#Specifies the max number of neighbor vehicles
+#default = 10
+MaxNeighbor = 10
+
+#Specifies the lifetime in the Location Table
+#default = 5
+LocationTableEntry = 5
+
+#Specifies the ethertype of itsnet packet
+#default = 0x707
+EthPItsnet = 0x707
+
+#Specifies sending beacon or not
+#default = true
+SendBeacon = true
+
+#Specifies the NodeId (for test purpose, not yet finalised)
+#default = aa:aa:bb:bb:cc:cc:00:11
+NodeId = "00:01:00:01:ca:01:00:01"
+#Specifies the covCrav Context
+#default = false
+Extended = false
+
+#Specifies the AF_INET port
+#defalut = 7777
+CovCravPort = 7777
+
+#Specifies the dll wireless mode ( IBSS or MONITOR (OCB))
+OCB = true
+
+#Specifies the MONITOR packet injection mode with ACK or NO_ACK
+ACK = true
